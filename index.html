@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title</title>
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+
+</head>
+<body>
+   <p>Mini Project 1: Implement Cross Site Scripting using stored attack. A stored cross-site scripting vulnerability in the comment functionality.</p>
+    <br>
+   <p>Enter this command in input field</p>
+   <p><button  onclick="alert('you have been hacked')"> hiii</button></p>
+   <div class="my-element">
+        <p>Cyber Security Mini Project</p>
+        <input id="in" type="text" class="subscribe-input">
+        <br>
+        <div id="s" class="submit-btn">SUBMIT</div>
+    </div>
+    <div>
+        <div id="d"></div>
+    </div>
+    
+
+    <script>
+        const s = document.getElementById("s");
+        const d = document.getElementById("d");
+        const input = document.getElementById("in");
+        s.addEventListener("click", (e) => {
+            console.log(input.value);
+            d.innerHTML += input.value;
+        });
+    </script>
+</body>
+</html>
